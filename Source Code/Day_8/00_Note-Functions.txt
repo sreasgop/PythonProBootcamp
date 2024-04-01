@@ -1,0 +1,9 @@
+# Actual Arguments: 
+Actual Arguments are the actual values or expressions that are passed to a function when it is called. Actual functions are defined in the calling function 
+
+# Formal Arguments: 
+Formal Arguments are defined in a function's declaration and act as place holders. Formal Arguments are the arguments in the function declaration. 
+
+Python Provides different ways of passing arguments during function call. 
+
+# Positional Arguments:
