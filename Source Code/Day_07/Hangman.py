@@ -2,7 +2,7 @@
 
 import random
 
-stages = ['''
+stages = [r'''
   +---+
   |   |
   O   |
@@ -10,7 +10,7 @@ stages = ['''
  / \  |
       |
 =========
-''', '''
+''', r'''
   +---+
   |   |
   O   |
@@ -18,7 +18,7 @@ stages = ['''
  /    |
       |
 =========
-''', '''
+''', r'''
   +---+
   |   |
   O   |
@@ -86,24 +86,18 @@ while not game_over:
             display += letter
         else:
             display += "_"
+    
+    print(display)
 
-
-    # if "_" in display: 
-    #     pass
-    # else:
-    #     print("You Won!")
-    #     game_over = True
+    if "_" not in display: 
+        print("You Won!")
+        game_over = True
 
     if guess not in word: 
         lives -= 1
         print(f"Wrong Guess! Lives remaining: {lives}")
+        if lives == 0:
+            game_over = True
+            print("Game Over! You Lose.")
     
     print(stages[lives])
-
-    if lives!=0:
-        pass
-        print(display,"\n")
-    else:
-        game_over = True
-        print("Game Over! You Lose.")
-
